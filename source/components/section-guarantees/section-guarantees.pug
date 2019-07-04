@@ -1,0 +1,15 @@
+mixin section-guarantees
+	section.section.section-guarantees#section-guarantees(data-section-name="guarantees")
+		.section__bg.bg-filter.bg-filter--light
+			img.wow.zoomIn(src="./images/bg2.jpg", alt="image" data-wow-duration="2s" data-wow-delay="0s" data-wow-offset="200")
+		.container
+			.section-guarantees__title
+				h2.title.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="0.5s" data-wow-offset="200") Вы цените качественный сервис, и мы его гарантируем!
+			ul.section-guarantees__list
+				each item,i in data.guarantees
+					li.section-guarantees__item.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay=`${1+i*0.1}s` data-wow-offset="100")
+						.section-guarantees__item-icon
+							+svg(item.icon)
+						.section-guarantees__item-text= item.text	
+		.section__number.section-guarantees__number
+			span 02						

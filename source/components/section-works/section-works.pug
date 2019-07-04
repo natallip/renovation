@@ -1,0 +1,22 @@
+mixin section-works
+	section.section.section-works#section-works(data-section-name="works")
+		.section__bg.bg-filter.bg-filter--light
+			img.wow.zoomIn(src="./images/bg6.jpg", alt="image" data-wow-duration="2s" data-wow-delay="0s" data-wow-offset="200")
+		.container
+			.section-works__title
+				h2.title.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="0.5s" data-wow-offset="200") Наши работы
+			.section-works__slider
+				.works__slider
+					          
+					ul.works__list#slider-works.owl-carousel.owl-theme      
+						each item, i in data.works
+							li.works__item.item.wow.zoomIn(data-wow-duration=".3s" data-wow-delay=`${i}s` data-wow-offset="200")
+								.works__item-photo
+									img(src="./images/" + item.img, alt=item.title)
+								.works__item-info
+									h4.works__item-name= item.title
+									p.works__item-text= item.text				
+				
+		.section__number.section-works__number
+			span 06										                
+							

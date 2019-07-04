@@ -1,0 +1,52 @@
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);   
+  z-index: 10;
+  background:#292929;
+  .container {
+    padding: 20px 0;
+    width: 80%;
+    @include media768 {
+      width: 480px;
+      padding: 20px;
+    }
+  }   
+  &__wrap {
+    display: flex;
+    justify-content: space-between;    
+  }  
+}
+.header-bg { 
+  background: rgba(#000, .8);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  &__icon {
+    margin-right: 20px;
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: $accent;
+    }
+  }   
+  &__name {
+    max-width: 300px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Open Sans Bold';
+    letter-spacing: 1.5px;
+    @include media768 {
+      font-size: 12px;
+      max-width: 220px;
+    }
+    @include media480 {
+      max-width: 150px;
+    }
+  } 
+}

@@ -1,0 +1,21 @@
+mixin section-steps
+	section.section.section-steps#section-steps(data-section-name="steps")
+		.section__bg.bg-filter.bg-filter--light
+			img.wow.zoomIn(src="./images/bg4.jpg", alt="image" data-wow-duration="2s" data-wow-delay="0s" data-wow-offset="200")
+		.container
+			.section-steps__title
+				h2.title.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="0.5s" data-wow-offset="200") Этапы работы
+			.section-steps__subtitle.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="0.8s" data-wow-offset="200") Всего пять шагов до комфортного жилья на долгие годы	
+			ul.section-steps__list
+				each item, i in data.steps
+					li.section-steps__item
+						.section-steps__box.wow.fadeInLeft(data-wow-duration=".8s" data-wow-delay=`${1+i*1}s` data-wow-offset="100") 
+							.section-steps__item-wrap
+								.section-steps__item-number 0
+									span= i+1
+								.section-steps__item-icon
+									+svg(item.icon)
+							.section-steps__item-text= item.text
+						.section-steps__item-line.wow.fadeInLeft(data-wow-duration=".5s" data-wow-delay=`${1.5+i*1}s` data-wow-offset="200")
+		.section__number.section-steps__number
+			span 04									

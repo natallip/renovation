@@ -1,0 +1,95 @@
+mixin section-calculator
+	section.section.section-calculator#section-calculator(data-section-name="calculator")
+		.container.section-calculator__wrap
+			.section-calculator__title
+				h2.title.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="0.5s" data-wow-offset="200") Узнайте примерную стоимость вашего ремонта!
+			form.section-calculator__calc#calculator(action="mail.php")
+				fieldset.calc#calc1.active
+					legend.calc__title Выберите тип вашего здания:
+					.calc__wrap
+						label.radio
+							input.radio__input(type="radio" name="building" value="new")
+							span.radio__box
+							span.radio__label Новостройка
+						label.radio
+							input.radio__input(type="radio" name="building" value="second")
+							span.radio__box
+							span.radio__label Вторичный рынок
+						label.radio
+							input.radio__input(type="radio" name="building" value="cottage")
+							span.radio__box
+							span.radio__label Коттедж
+				fieldset.calc#calc2
+					legend.calc__title Какой ремонт вам нужен?
+					.calc__wrap
+						label.radio
+							input.radio__input(type="radio" name="type" value="cosmetic")
+							span.radio__box
+							span.radio__label Косметический
+						label.radio
+							input.radio__input(type="radio" name="type" value="capital")
+							span.radio__box
+							span.radio__label Капитальный
+						label.radio
+							input.radio__input(type="radio" name="type" value="designer")
+							span.radio__box
+							span.radio__label Дизайнерский
+						label.radio
+							input.radio__input(type="radio" name="type" value="other")
+							span.radio__box
+							span.radio__label Другой
+				fieldset.calc#calc3
+					legend.calc__title Площадь помещений, которые предстоит ремонтировать:
+					.calc__wrap
+						input.input__border(type="number" name="square" placeholder="кв.м")
+				fieldset.calc#calc4
+					legend.calc__title 
+						|Нужен ли ремонт балкона?
+						|Если да, то укажите площадь балкона
+					.calc__wrap
+						label.radio
+							input.radio__input(type="radio" name="balcony" value="yes")
+							span.radio__box
+							span.radio__label Да
+						input.input__border(type="number" name="squareBalcony" placeholder="кв.м")
+						label.radio
+							input.radio__input(type="radio" name="balcony" value="no")
+							span.radio__box
+							span.radio__label Нет
+				fieldset.calc#calc5
+					legend.calc__title Потребуются ли дополнительные услуги?
+					.calc__wrap
+						label.radio
+							input.radio__input(type="radio" name="additionally" value="design-project")
+							span.radio__box
+							span.radio__label Дизайн-проект
+						label.radio
+							input.radio__input(type="radio" name="additionally" value="redevelopment")
+							span.radio__box
+							span.radio__label Перепланировка
+						label.radio
+							input.radio__input(type="radio" name="additionally" value="no")
+							span.radio__box
+							span.radio__label Нет
+				fieldset.calc#calc6
+					legend.calc__title 
+						| Пожалуйста, оставте ваши контактные данные. 
+						| Мы просчитаем стоимость ремонта и свяжемся с вами в течение одного часа
+					.calc__wrap
+						label.input
+							input.input__box(type="text" name="name" placeholder="Ваше имя" required)
+						label.input
+							input.input__box(type="tel" name="phone" placeholder="Номер телефона" required)
+				button(type="button")#btnNext.btn.btn--transparent.section-calculator__btn Далее
+				input(type="submit" value="Заказать расчет")#btnSubmit.btn.section-calculator__btn 
+			ul.steps#steps
+				li.steps__item.active 1
+				li.steps__item 2			
+				li.steps__item 3			
+				li.steps__item 4			
+				li.steps__item 5
+		.section__number.section-calculator__number
+			span 05
+		.done
+			p.done__text Спасибо! Скоро мы перезвоним
+			.done__icon

@@ -1,0 +1,107 @@
+.section-services {  
+  background: linear-gradient(rgba(#000, .5), rgba(#000, .5)), url("/images/b3.jpg") no-repeat center/cover;
+  &__title {
+    margin-bottom: 100px;
+    @include media980 {
+      margin-bottom: 60px;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    @include media980 {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 50px 22px 100px;
+    border-radius: 5px;
+    color: #000;
+    text-align: center;
+    position: relative;
+    transition: 0.5s;
+    @include media980 {
+      width: 300px;
+      margin-bottom: 20px;
+    }
+    @include media480 {
+      width: 280px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    } 
+    &:hover {
+      background: linear-gradient(rgba(#000, .2), rgba(#000, .2)), url("/images/r1.jpg") no-repeat center/cover; 
+      color: #fff;
+      outline: 1px solid rgba(#fff, .5); 
+      outline-offset: -15px;
+      transform: translateY(-10px);
+      .section-services__item-text, .section-services__item-price {
+        opacity: 0;
+      }      
+    }
+    &:nth-child(2):hover {
+      background: linear-gradient(rgba(#000, .2), rgba(#000, .2)), url("/images/r2.jpg") no-repeat center/cover; 
+    }
+    &:nth-child(3):hover {
+      background: linear-gradient(rgba(#000, .2), rgba(#000, .2)), url("/images/r3.jpg") no-repeat center/cover; 
+    }
+  }
+  &__item-title {
+    font-family: 'Open Sans Bold';
+    font-size: 18px;
+    margin-bottom: 50px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 2px;
+      background: $accent;
+    }
+  }
+  &__item-text {
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+  &__item-price {
+    font-family: 'Open Sans Bold';
+    font-size: 18px;
+    margin-bottom: 30px;
+    span {
+      margin: 0 6px;
+    }
+  }
+  &__item-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__info {
+    font-family: 'Open Sans Bold';
+    text-align: center;
+    letter-spacing: 0.5px;
+    span {
+      color: $accent;
+      border-bottom: 2px dashed $accent;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+  &__number span {
+    background-color: transparent;
+    color: #fff;
+  }
+}

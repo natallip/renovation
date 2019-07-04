@@ -1,0 +1,24 @@
+extends static/pug/template
+include components/components
+
+block variables
+	- var title = 'Ремонт квартир'
+	- var description = 'description'
+	- var keywords = 'keywords'
+
+block content
+
+	div.page__wrapper
+		+preloader
+		+pagination
+		+header
+		div#fullpage
+			+section-first-screen
+			+section-guarantees
+			+section-services
+			+section-steps    
+			+section-calculator  
+			+section-works
+			+section-order
+			+section-contacts
+			+footer

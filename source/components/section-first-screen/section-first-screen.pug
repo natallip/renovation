@@ -1,0 +1,29 @@
+mixin section-first-screen    
+	section.section.section-first#section-first(data-section-name="first")
+		.container
+			.section-first__info
+				.section-first__info-block
+					h1.section-first__title.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="1s") Закажите профессиональный ремонт квартир и домов "под ключ"
+				.section-first__info-block
+					ul.section-first__info-list
+						li.section-first__info-item.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1.5s")
+							.section-first__info-icon
+								+svg("guarantee")
+							.section-first__info-text Работаем по договору
+						li.section-first__info-item.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1.7s")
+							.section-first__info-icon
+								+svg("money")
+							.section-first__info-text От 20$/м<sup>2</sup>
+						li.section-first__info-item.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1.9s")
+							.section-first__info-icon
+								+svg("shield")
+							.section-first__info-text Гарантия от 1 года	
+			.section-first__descr-title.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="2.2s") Вызывайте нашего специалиста прямо сейчас и вы получите:
+			ul.section-first__descr-list
+				each item, i in data.descr
+					li.section-first__descr-item.wow.fadeIn(data-wow-duration=".5s" data-wow-delay=`${2.5+i*0.2}s`)
+						.section-first__descr-icon
+							+svg(item.icon)
+						.section-first__descr-text= item.text
+			a.section-first__btn.btn.wow.fadeIn(href="#section-order" data-wow-duration=".5s" data-wow-delay="2.5s") Вызвать мастера
+			span.section-first__free.wow.fadeIn(data-wow-duration=".5s" data-wow-delay="2.5s") Это бесплатно		

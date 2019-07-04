@@ -1,0 +1,21 @@
+mixin section-services
+	section.section.section-services#section-services(data-section-name="services")
+		.container
+			.section-services__title
+				h2.title.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="0.5s" data-wow-offset="200") Виды наших услуг и их стоимость
+			ul.section-services__list
+				each item in data.services
+					li.section-services__item
+						h3.section-services__item-title= item.title
+						.section-services__item-text= item.text
+						.section-services__item-price от
+							span= item.price
+							|$/м<sup>2</sup> 							
+						.section-services__item-btn.btn Расчитать
+			.section-services__info
+				|Ознакомиться с 
+				span детальным перечнем работ
+				|, которые мы выполняем	
+		.section__number.section-services__number
+			span 03										
+			

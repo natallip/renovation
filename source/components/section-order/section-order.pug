@@ -1,0 +1,19 @@
+mixin section-order
+	section.section.section-order#section-order(data-section-name="order")
+		.container.section-order__wrap
+			.section-order__title
+				h2.title.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="0.5s" data-wow-offset="200") Оформите заявку сейчас и получите клининг в конце ремонта в подарок!
+			.section-order__subtitle.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1s" data-wow-offset="200") Предложение действует при заказе капитального или дизайнерского ремонта
+
+			.section-order__form.wow.fadeInUp(data-wow-duration=".5s" data-wow-delay="1.5s" data-wow-offset="200")
+				form#formOrder(action="callback.php")
+					.form__wrap
+						input.form__input(type="tel", name="phone" placeholder="Номер телефона")
+						input.btn(type="submit" value="Заказать ремонт")
+				
+		.section__number.section-services__number
+			span 07
+
+		.done-order
+			p.done__text Спасибо! Скоро мы перезвоним
+			.done__icon

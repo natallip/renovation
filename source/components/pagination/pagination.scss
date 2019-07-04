@@ -1,0 +1,26 @@
+.page__pagination {
+  position: fixed;
+  left: 8%;
+  top: 15%;
+  width: auto;
+  z-index: 10;
+  @include media1200 {
+    display: none;
+  }
+}
+.pagination {
+  display: flex;
+  flex-direction: column;
+  &__item a {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #ccc;
+    margin: 25px 0;
+    &.active {
+      background: $accent;
+      height: 4px;
+      width: 30px;
+    }
+  }
+}
